@@ -4,28 +4,95 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>August calendar</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        main {
+            margin-top: 100px;
+            width: 500px;
+            display: flex;
+            flex-direction: column;
+           border: 1px solid darkgray;
+           justify-content: center;
+           margin-left: calc(50% - 250px);
+           border-radius: 20px;
+        }
+      .calendar {
+        border-radius: 20px;
+      }
+       
+       table {
+        
+        width: 500px;
+       }
+       header {
+        height: 250px;
+        font-size: 50px;
+        padding-top:20px;
+        margin-bottom: 40px;
+       border-bottom: 1px solid black;
+       background-color: pink;
+       color: white;
+       border-radius: 20px;
+       padding-left: 20px;
+       }
+        thead {
+    color: red;
+}
+      
+       tr {
+        line-height: 40px;
+       }
+       td {
+        text-align: center;
+       }
+
+       .day { 
+        font-size: 120px;
+       }
+       
+       .month {
+        font-size: 60px;
+        padding-left: 15px;
+       }
+
+       .vacation {
+        color: red;
+       }
+
+       .other-month {
+        color: rgb(183, 166, 166);
+       }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>18 <br> august
-        </h1>
-    </header>
     <main>
+        <div class="calendar">
+        <header>
+            <div class="day">18</div>
+            <div class="month">august</div>
+        </header>
+        
         <table>
+        <thead>
             <tr>
-                <th>MON</th>
-                <th>TUE</th>
-                <th>WED</th>
-                <th>THU</th>
-                <th>FRI</th>
-                <th>SAT</th>
-                <th>SUN</th>
+                <td>MON</td>
+                <td>TUE</td>
+                <td>WED</td>
+                <td>THU</td>
+                <td>FRI</td>
+                <td>SAT</td>
+                <td>SUN</td>
             </tr>
+        </thead>
+        <tbody>
             <tr>
-                <td>29</td>
-                <td>30</td>
-                <td>31</td>
+                <td class="other-month">29</td>
+                <td class="other-month">30</td>
+                <td class="other-month">31</td>
                 <td>1</td>
                 <td>2</td>
                 <td>3</td>
@@ -47,7 +114,7 @@
                 <td>15</td>
                 <td>16</td>
                 <td>17</td>
-                <td>18</td>
+                <td class="vacation">18</td>
             </tr>
             <tr>
                 <td>19</td>
@@ -65,9 +132,11 @@
                 <td>29</td>
                 <td>30</td>
                 <td>31</td>
-                <td>1</td>
+                <td class="other-month">1</td>
             </tr>
+        </tbody>
         </table>
+    </div>
     </main>
 </body>
 </html>
